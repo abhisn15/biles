@@ -123,30 +123,6 @@ const Home = () => {
                     )}
                 </div>
                 <h1 className="title text-[38px] font-bold text-center mt-14 mx-5 max-[1024px]:text-[20px]">Yukk Pelajari produk Biles yang tersedia<br />sesuai dengan kebutuhan kamu</h1>
-                <Tabs value="dashboard" className="mt-14">
-                    <TabsHeader className="mb-10 rounded-lg bg-white shadow-lg mx-auto w-80" indicatorProps={{
-                        className: "tab text-blue-500 max-[400px]:w-[140px] mx-auto",
-                    }}>
-                        {list.map(({ label, value, icon }) => (
-                            <Tab key={value} value={value} className="mx-auto">
-                                <div className="flex items-center gap-2"
-                                >
-                                    {React.createElement(icon, { className: "w-5 h-5" })}
-                                    {label}
-                                </div>
-                            </Tab>
-                        ))}
-                    </TabsHeader>
-                    <div className="flex justify-center">
-                        <TabsBody className=" bg-white rounded-lg shadow-lg w-[1800px] mx-5 text-center">
-                            {list.map(({ value, desc }) => (
-                                <TabPanel className="font-medium" key={value} value={value}>
-                                    {desc}
-                                </TabPanel>
-                            ))}
-                        </TabsBody>
-                    </div>
-                </Tabs>
                 {/* <div className="flex mt-36 gap-20 justify-center align-items">
                     {bprivate.map((bprivate, i) =>
                         <>
