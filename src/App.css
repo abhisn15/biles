@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("/public/font/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins bold";
+    src: url("/public/font/Poppins-Bold.ttf");
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: #35BBB9 !important;
+}
+
+.MuiInput-root {
+    border-color: #35BBB9 !important;
+}
+
+#root {
+    overflow-x: none;
+    min-width: 320px;
+}
+
+.judul-banner {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #333842;
+}
+
+.title {
+    font-family: 'Poppins';
+}
+
+.tab {
+    background: linear-gradient(209.69deg, #35BBB9 8.23%, #3DB6FA 10.51%), #FFFFFF;
+}
+
+@media screen and (max-width: 720px) {
+    .judul-banner {
+        font-size: 25px;
+        line-height: 44px;
+    }
+}
