@@ -126,7 +126,7 @@ const Home = () => {
                 <Tabs value="dashboard" className="mt-14">
                     <TabsHeader className="mb-10 rounded-lg bg-white shadow-lg mx-auto w-80" indicatorProps={{
                         className: "tab text-blue-500 max-[400px]:w-[140px] mx-auto",
-                    }}>
+                    }}> 
                         {list.map(({ label, value, icon }) => (
                             <Tab key={value} value={value} className="mx-auto">
                                 <div className="flex items-center gap-2"
