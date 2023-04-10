@@ -98,7 +98,7 @@ const Home = () => {
                         }}
                     />
                 </h1>
-                <div className="flex justify-center flex-wrap mx-5 mx-auto lg:flex pt-48 lg:justify-center lg:align-items lg:gap-20 max-[1024px]:gap-20 lg:pt-44">
+                <div className="flex justify-center flex-wrap max-[720px]:mx-5 mx-auto lg:flex pt-48 lg:justify-center lg:align-items lg:gap-20 max-[1024px]:gap-10 lg:pt-44">
                     {banner.map((banner, i) =>
                         <>
                             <Card className="max-[550px]:mt-12" sx={{ maxWidth: 500 }}>
@@ -122,7 +122,7 @@ const Home = () => {
                         </>
                     )}
                 </div>
-                <h1 className="title text-[38px] font-bold text-center mt-14 mx-5 max-[1024px]:text-[20px]">Yukk Pelajari produk Biles yang tersedia<br />sesuai dengan kebutuhan kamu</h1>
+                <h1 className="title text-[38px] font-bold text-center mt-14 mx-5 max-[1024px]:text-[20px]">Yukk Pelajari produk Biles yang tersedia<br/>sesuai dengan kebutuhan kamu</h1>
                 <Tabs value="dashboard" className="mt-14">
                     <TabsHeader className="mb-10 rounded-lg bg-white shadow-lg mx-auto w-80" indicatorProps={{
                         className: "tab text-blue-500 max-[400px]:w-[140px] mx-auto",

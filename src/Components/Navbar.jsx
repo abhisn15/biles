@@ -170,7 +170,7 @@ const Navbar = () => {
                                                 </div> */}
                                                 <div className='border rounded bg-white w-96 items-start gap-6 z-50 px-10 py-6 animate__fadeIn animate__delay-2s'>
                                                     <div className='ml-6 animate-fade-in'>
-                                                        <button className='relative left-72 text-xl max-[2400px]:left-[270px] max-[600px]:left-65 max-[420px]:left-[250px] max-[360px]:left-[235px]'
+                                                        <button className='relative left-72 text-2xl max-[2400px]:left-[270px] max-[600px]:left-65 max-[420px]:left-[250px] top-2 max-[360px]:left-[235px]'
                                                             type="button"
                                                             onClick={() => setShowModal(false)}>
                                                             X
@@ -190,7 +190,7 @@ const Navbar = () => {
                                                                 </Tabs>
                                                             </Box>
                                                             {/* FORM USER MASUK TABS  */}
-                                                            <TabPanel className="relative right-8 pt-4 w-auto max-[600px]:ml-1.5" value={value} index={0}>
+                                                            <TabPanel className="relative right-8 pt-4 w-auto max-[600px]:mr-2" value={value} index={0}>
                                                                 <span className='font-bold text-gray-500'>Nomor HP atau Email</span>
                                                                 <Box
                                                                     component="form"
