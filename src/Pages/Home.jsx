@@ -89,7 +89,7 @@ const Home = () => {
     return (
         <div className="banner h-[500px] w-full bg-bottom bg-cover bg-no-repeat bg-[url('https://2828691.fs1.hubspotusercontent-na1.net/hubfs/2828691/03%20-%20Homepage%20Brainacademy%202022/image%20251%20(1).png')]">
             <div className="containe mx-auto">
-                <h1 className="judul-banner md:ml-10 pt-40 ml-2 md:pt-40">Bimbel online & Private<br></br>
+                <h1 className="judul-banner md:ml-10 pt-40 ml-2 md:pt-40 mx-5">Bimbel online & Private<br></br>
                     <Typewriter
                         options={{
                             strings: "untuk Siswa / Siswi SMA",
@@ -98,7 +98,7 @@ const Home = () => {
                         }}
                     />
                 </h1>
-                <div className="flex justify-center flex-wrap mx-5 mx-auto lg:flex pt-48 lg:justify-center lg:align-items lg:gap-20 max-[1024px]:gap-20 lg:pt-44">
+                <div className="flex justify-center flex-wrap mx-auto lg:flex pt-48 lg:justify-center lg:align-items lg:gap-20 lg:pt-44 max-[500px]:mx-5">
                     {banner.map((banner, i) =>
                         <>
                             <Card className="max-[550px]:mt-12" sx={{ maxWidth: 500 }}>
@@ -124,7 +124,7 @@ const Home = () => {
                 </div>
                 <h1 className="title text-[38px] font-bold text-center mt-14 mx-5 max-[1024px]:text-[20px]">Yukk Pelajari produk Biles yang tersedia<br />sesuai dengan kebutuhan kamu</h1>
                 <Tabs value="dashboard" className="mt-14">
-                    <TabsHeader className="mb-10 rounded-lg bg-white shadow-lg mx-auto w-80" indicatorProps={{
+                    <TabsHeader className="mb-10 rounded-lg bg-white shadow-lg drop-shadow-md md:drop-shadow-xl mx-auto w-80" indicatorProps={{
                         className: "tab text-blue-500 max-[400px]:w-[140px] mx-auto",
                     }}>
                         {list.map(({ label, value, icon }) => (
