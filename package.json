@@ -17,8 +17,10 @@
     "@material-tailwind/react": "^1.4.2",
     "@mui/material": "^5.11.15",
     "animate.css": "^4.1.1",
+    "jsonwebtoken": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-router-dom": "^6.10.0",
     "scrollreveal": "^4.0.9",
     "typewriter-effect": "^2.19.0"
@@ -28,7 +30,8 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
     "tailwindcss": "^3.3.1",
     "vite": "^4.2.0"
   }

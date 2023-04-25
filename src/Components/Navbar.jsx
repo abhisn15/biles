@@ -16,6 +16,9 @@ import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
 
+import '../index.css';
+import Email from '../InputMessage/Email';
+
 const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Team', href: '#', current: false },
@@ -61,13 +64,16 @@ const a11yProps = (index) => {
     };
 }
 
+
 const Navbar = () => {
+
     const [showModal, setShowModal] = React.useState(false);
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
 
 
     return (
@@ -168,8 +174,8 @@ const Navbar = () => {
                                                     </button>
                                                     </div>
                                                 </div> */}
-                                                <div className='border rounded bg-white w-96 items-start gap-6 z-50 px-10 py-6 animate__fadeIn animate__delay-2s'>
-                                                    <div className='ml-6 animate-fade-in'>
+                                                <div className='border rounded bg-white w-96 items-start gap-6 z-50 px-10 py-6'>
+                                                    <div className='ml-6'>
                                                         <button className='relative left-72 text-2xl max-[2400px]:left-[270px] max-[600px]:left-65 max-[420px]:left-[250px] top-2 max-[360px]:left-[235px]'
                                                             type="button"
                                                             onClick={() => setShowModal(false)}>
@@ -190,8 +196,8 @@ const Navbar = () => {
                                                                 </Tabs>
                                                             </Box>
                                                             {/* FORM USER MASUK TABS  */}
-                                                            <TabPanel className="relative right-8 pt-4 w-auto max-[600px]:mr-2" value={value} index={0}>
-                                                                <span className='font-bold text-gray-500'>Nomor HP atau Email</span>
+                                                            <TabPanel className="relative right-8 w-auto max-[600px]:mr-2" value={value} index={0}>
+                                                                <span className='text-gray-500'>Alamat Email</span>
                                                                 <Box
                                                                     component="form"
                                                                     sx={{
@@ -201,11 +207,25 @@ const Navbar = () => {
                                                                     noValidate
                                                                     autoComplete="off"
                                                                 >
-                                                                    <div className='relative right-2'>
-                                                                        <TextField className='bg-gray-100 drop-shadow-md'
-                                                                            id="outlined-multiline-flexible"
-                                                                            maxRows={4}
+                                                                    <Email />
+                                                                    <div className='mt-5'>
+                                                                        <span className='text-gray-500'>Kata Sandi</span>
+                                                                        <Box
+                                                                            component="form"
+                                                                            sx={{
+                                                                                '& .MuiTextField-root': { m: 1, width: '30ch' },
+                                                                            }}
+                                                                            className=''
+                                                                            noValidate
+                                                                            autoComplete="off"
                                                                         />
+                                                                        <div className='relative right-2'>
+                                                                            <TextField className='drop-shadow-md'
+                                                                                set type={'password'}
+                                                                                id="outlined-multiline-flexible"
+                                                                                maxRows={4}
+                                                                            />
+                                                                        </div>
                                                                     </div>
                                                                     <Button sx={{ "&:hover": { backgroundColor: "#35BBB9" }, backgroundColor: "#35BBB9", paddingTop: "8px", paddingBottom: "8px", paddingRight: "90px", marginTop: "25px", }} variant="contained">
                                                                         <span className='relative left-9 w-40 text-gray-200 font-bold'>Masuk Sekarang</span>
@@ -229,8 +249,8 @@ const Navbar = () => {
                                                                 </Box>
                                                             </TabPanel>
                                                             {/* FORM USER DAFTAR TABS */}
-                                                            <TabPanel className="relative right-9 pt-4 max-[600px]:ml-1.5" value={value} index={1}>
-                                                                <span className='font-bold text-gray-500'>Nomor HP atau Email</span>
+                                                            <TabPanel className="relative right-9 max-[600px]:ml-1.5" value={value} index={1}>
+                                                                <span className='text-gray-500'>Nama Lengkap</span>
                                                                 <Box
                                                                     component="form"
                                                                     sx={{
@@ -241,10 +261,62 @@ const Navbar = () => {
                                                                     autoComplete="off"
                                                                 >
                                                                     <div className='relative right-2'>
-                                                                        <TextField className='bg-gray-100 drop-shadow-md'
+                                                                        <TextField className='drop-shadow-md'
                                                                             id="outlined-multiline-flexible"
                                                                             maxRows={4}
                                                                         />
+                                                                    </div>
+                                                                    <div className='mt-5'>
+                                                                        <span className='text-gray-500'>Alamat Email</span>
+                                                                        <Box
+                                                                            set type={"email"}
+                                                                            component="form"
+                                                                            sx={{
+                                                                                '& .MuiTextField-root': { m: 1, width: '30ch' },
+                                                                            }}
+                                                                            className=''
+                                                                            noValidate
+                                                                            autoComplete="off"
+                                                                        />
+                                                                        <Email />
+                                                                    </div>
+                                                                    <div className='mt-5'>
+                                                                        <span className='text-gray-500'>Kata Sandi</span>
+                                                                        <Box
+                                                                            component="form"
+                                                                            sx={{
+                                                                                '& .MuiTextField-root': { m: 1, width: '30ch' },
+                                                                            }}
+                                                                            className=''
+                                                                            noValidate
+                                                                            autoComplete="off"
+                                                                        />
+                                                                        <div className='relative right-2'>
+                                                                            <TextField className='drop-shadow-md'
+                                                                                set type={'password'}
+                                                                                id="outlined-multiline-flexible"
+                                                                                maxRows={4}
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className='mt-5'>
+                                                                        <span className='text-gray-500'>Ulang Kata Sandi</span>
+                                                                        <Box
+                                                                            component="form"
+                                                                            sx={{
+                                                                                '& .MuiTextField-root': { m: 1, width: '30ch' },
+                                                                            }}
+                                                                            className=''
+                                                                            noValidate
+                                                                            autoComplete="off"
+                                                                        />
+                                                                        <div className='relative right-2'>
+                                                                            <TextField className='drop-shadow-md'
+                                                                                set type={'password'}
+                                                                                id="outlined-multiline-flexible"
+                                                                                maxRows={4}
+                                                                            />
+                                                                        </div>
                                                                     </div>
                                                                     <div className='flex justify-center items-center pt-6'>
                                                                         <span className='w-[300px] text-[12px] text-gray-300'>
@@ -252,13 +324,13 @@ const Navbar = () => {
                                                                         </span>
                                                                         <hr className='absolute left-[158px] bg-gray-300 h-[3px] w-[134px]' />
                                                                     </div>
-                                                                    <Button sx={{ "&:hover": { backgroundColor: "#EBF8F8" }, width: "262px", backgroundColor: "#EBF8F8", paddingTop: "6px", paddingBottom: "6px", paddingRight: "112px", marginTop: "25px" }} variant='contained'>
+                                                                    {/* <Button sx={{ "&:hover": { backgroundColor: "#EBF8F8" }, width: "262px", backgroundColor: "#EBF8F8", paddingTop: "6px", paddingBottom: "6px", paddingRight: "112px", marginTop: "25px" }} variant='contained'>
                                                                         <div className='flex relative justify-center items-center text-black left-11'>
                                                                             <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" className='mr-2 w-8' />
                                                                             <span className='normal-case font-[500] text-[16px]'>Google</span>
                                                                             <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/arrow-2693162-2234845.png?f=avif&w=256" className="ml-2 w-7" />
                                                                         </div>
-                                                                    </Button>
+                                                                    </Button> */}
                                                                     <Button sx={{ "&:hover": { backgroundColor: "#35BBB9" }, backgroundColor: "#35BBB9", paddingTop: "8px", paddingBottom: "8px", paddingRight: "90px", marginTop: "25px", }} variant="contained">
                                                                         <span className='relative top-[1.5px] left-9 w-40 text-gray-200 font-bold'>Daftar Sekarang</span>
                                                                     </Button>
