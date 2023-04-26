@@ -1,20 +1,11 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './index.html'],
+  darkMode: false, // atau 'media' atau 'class'
   theme: {
-    extend: {
-      animation: {
-        'fade-in': 'fadeIn 3s ease-out'
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
-        }
-      }
-    },
+    extend: {},
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [],
-}
-
-
+};
